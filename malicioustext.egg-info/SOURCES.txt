@@ -1,0 +1,6 @@
+setup.py
+malicioustext.egg-info/PKG-INFO
+malicioustext.egg-info/SOURCES.txt
+malicioustext.egg-info/dependency_links.txt
+malicioustext.egg-info/requires.txt
+malicioustext.egg-info/top_level.txt
