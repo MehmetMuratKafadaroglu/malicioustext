@@ -68,12 +68,12 @@ class Filter:
         return self
 
     def dump(self):
-        pickle.dump(self.vectorizer, open("../models/vectorizer_%s.sav"%self.model_name, 'wb'))
-        pickle.dump(self.model, open("../models/%s.sav"%self.model_name, 'wb'))
+        pickle.dump(self.vectorizer, open("./models/vectorizer_%s.sav"%self.model_name, 'wb'))
+        pickle.dump(self.model, open("./models/%s.sav"%self.model_name, 'wb'))
  
     def load(self):
-        self.vectorizer = pickle.load(open("../models/vectorizer_%s.sav"%self.model_name, 'rb'))
-        self.model= pickle.load(open("../models/%s.sav"%self.model_name, 'rb'))
+        self.vectorizer = pickle.load(open("./models/vectorizer_%s.sav"%self.model_name, 'rb'))
+        self.model= pickle.load(open("./models/%s.sav"%self.model_name, 'rb'))
         return self
 
 

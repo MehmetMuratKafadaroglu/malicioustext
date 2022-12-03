@@ -1,4 +1,5 @@
 setup.py
+malicioustext/__init__.py
 malicioustext.egg-info/PKG-INFO
 malicioustext.egg-info/SOURCES.txt
 malicioustext.egg-info/dependency_links.txt
