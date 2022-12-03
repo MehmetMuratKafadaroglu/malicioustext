@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: offensivetext
+Version: 0.2.0
+Summary: Filter out racism, sexism and sexual content with pretrained models
+Home-page: https://github.com/MehmetMuratKafadaroglu/offensivetext
+Author: Mehmet Kafadaroglu
+Author-email: mehmetkafadaroglu@gmail.com
+License: BSD 2-clause
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+
+UNKNOWN
+
