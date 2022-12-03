@@ -22,15 +22,13 @@ def tokenize(doc:str):
 def is_link_or_at(token:str):
     return token[0] == '@' or token[:7] == 'https:/'
 
-
-VALIDATION_SPLIT = .1
 class Filter:
     error_message= "This method must be overwritten"
     def __init__(self,model_name) -> None:
         self.model_name= model_name
         self.accuracy = None 
-        self.vectorizer = pickle.load(open("./malicioustext/models/vectorizer_%s.sav"%self.model_name, 'rb'))
-        self.model= pickle.load(open("./malicioustext/models/%s.sav"%self.model_name, 'rb'))
+        self.vectorizer = pickle.load(open("./models/vectorizer_%s.sav"%self.model_name, 'rb'))
+        self.model= pickle.load(open("./models/%s.sav"%self.model_name, 'rb'))
 
     def __call__(self, *messages):
         vectors = self.vectorizer.transform(messages)
