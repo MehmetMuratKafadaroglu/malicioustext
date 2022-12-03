@@ -37,15 +37,19 @@ def test_from_load():
     cbullying_filters = [CyberBullyingFilter(),BayesianCyberBullyingFilter(), ]
 
     for filter in sexual_content_filters:
+        filter.load()
         print(filter("Show the tits", "The weather is so nice today"))
 
     for filter in racism_filters:
+        filter.load()
         print(filter("Jews and gypsies are the worst, blacks are bit better", "The weather is so nice today"))
 
     for filter in sexism_filters:
+        filter.load()
         print(filter("Place of the woman is kitchen, men are superior to women", "The weather is so nice today"))
     
     for filter in cbullying_filters:
+        filter.load()
         print(filter("You look ugly, go kill yourself", "The weather is so nice today"))
 
 
