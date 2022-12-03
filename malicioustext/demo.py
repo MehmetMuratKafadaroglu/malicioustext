@@ -66,4 +66,4 @@ def test_from_load():
 0.839832285115304 Bayesian Bullying
 0.8517819706498951 Random Forest Bullying
 """
-test_and_dump()
+test_from_load()

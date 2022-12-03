@@ -244,8 +244,8 @@ class CyberBullyingFilter(RandomForestFilter):
 
 
 def get_sexual_data():
-    positive_file =open('../../../data/sexually_explicit_comments.csv', 'r', encoding='utf-8')
-    negative_file =pd.read_csv('../../../data/FinalBalancedDataset.csv')
+    positive_file =open('../../data/sexually_explicit_comments.csv', 'r', encoding='utf-8')
+    negative_file =pd.read_csv('../../data/FinalBalancedDataset.csv')
 
     negatives = [i[-1] for i in negative_file.values if i[1] == 0]
     positives = positive_file.read().splitlines()
@@ -253,20 +253,20 @@ def get_sexual_data():
     return negatives, positives
 
 def get_racism_data():
-    file =pd.read_csv("../../../data/cyberbullying_tweets.csv")
+    file =pd.read_csv("../../data/cyberbullying_tweets.csv")
     negatives= [row[0] for row in file.values if row[-1] == 'not_cyberbullying']
     positives =[row[0] for row in file.values if row[-1] == 'ethnicity'] 
     return negatives, positives
 
 def get_cyberbullying_data():
-    file = pd.read_csv('../../../data/cyberbullying_tweets.csv')
+    file = pd.read_csv('../../data/cyberbullying_tweets.csv')
     negatives=  [row[0] for row in file.values if row[1] == 'not_cyberbullying']
     positives=  [row[0] for row in file.values if row[1] != 'not_cyberbullying']
     return negatives, positives
 
 def get_sexism_data():
-    negative_file = pd.read_csv('../../../data/cyberbullying_tweets.csv')
-    positive_file = pd.read_csv('../../../data/sexist/sexism_data.csv')
+    negative_file = pd.read_csv('../../data/cyberbullying_tweets.csv')
+    positive_file = pd.read_csv('../../data/sexist/sexism_data.csv')
     positives =[row[2] for row in positive_file.values if row[4]]       
     negatives= [row[0] for row in negative_file.values if row[-1] == 'not_cyberbullying'] 
     return negatives, positives
